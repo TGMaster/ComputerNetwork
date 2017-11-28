@@ -39,7 +39,7 @@ ip address 1.1.1.1 255.255.255.255
 
 #Enable loopback
 interface loopback 1
-ip address 172.16.30.1 255.255.255.255 (Connect ISP)
+ip address 172.16.30.1 255.255.255.252 (Connect ISP)
 
 
 #Static default route R1
