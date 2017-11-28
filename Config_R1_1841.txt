@@ -1,0 +1,30 @@
+en
+conf ter
+hostname R1
+no ip domain-lookup
+enable secret <password>
+banner motd &
+<
+******************************** 
+!!!AUTHORIZED ACCESS ONLY!!! 
+******************************** 
+& 
+>
+line console 0
+password <password>
+login
+exit
+line vty 0 4
+password <password>
+login exit
+interface fastethernet 0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+description R1 LAN
+interface serial 0/0/0
+ip address 192.168.2.1 255.255.255.0
+clock rate 64000
+no shutdown
+description Link to R2
+end
+copy run start
