@@ -28,3 +28,11 @@ no shutdown
 description Link to R2
 end
 copy run start
+
+
+
+
+#Loopback
+conf t
+interface loopback 0
+ip address 1.1.1.1 255.255.255.255
