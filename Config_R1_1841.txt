@@ -42,6 +42,9 @@ interface loopback 1
 ip address 172.16.30.1 255.255.255.255 (Connect ISP)
 
 
+#Static default route R1
+ip route 0.0.0.0 0.0.0.0 loopback 1
+
 #Change bandwidth
 conf t
 interface serial 0/0/0
